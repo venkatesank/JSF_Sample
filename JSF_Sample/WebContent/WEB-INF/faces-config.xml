@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE faces-config PUBLIC
+  "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.1//EN"
+  "http://java.sun.com/dtd/web-facesconfig_1_1.dtd">
+
+<faces-config>
+  <navigation-rule>
+   <from-view-id>/pages/campaign.jsp</from-view-id>
+    <navigation-case>
+     <from-outcome>success</from-outcome>
+     <to-view-id>/pages/campaigndetail.jsp</to-view-id>
+   </navigation-case>
+   <navigation-case>
+     <from-outcome>notfound</from-outcome>
+     <to-view-id>/pages/campaignnotfound.jsp</to-view-id>
+   </navigation-case>
+   <navigation-case>
+     <from-outcome>addCampaign</from-outcome>
+     <to-view-id>/pages/addcampaign.jsp</to-view-id>
+   </navigation-case>
+  </navigation-rule>
+  
+  <navigation-rule>
+   <from-view-id>/pages/campaigndetail.jsp</from-view-id>
+     <navigation-case>
+     <from-outcome>addCampaign</from-outcome>
+     <to-view-id>/pages/addcampaign.jsp</to-view-id>
+   </navigation-case>
+  </navigation-rule>
+  
+  <navigation-rule>
+   <from-view-id>/pages/addcampaign.jsp</from-view-id>
+     <navigation-case>
+     <from-outcome>success</from-outcome>
+      <to-view-id>/pages/campaigndetail.jsp</to-view-id>
+   </navigation-case>
+  </navigation-rule>
+  
+  <managed-bean>
+    <managed-bean-name>campaignBean</managed-bean-name>
+    <managed-bean-class>epro.bean.CampaignBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>  
+</faces-config>
