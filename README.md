@@ -1,4 +1,4 @@
 JSF_Sample
 ==========
 
-Created small application using nested bean in JSF.
+Created small application(add & display) using nested bean in JSF
